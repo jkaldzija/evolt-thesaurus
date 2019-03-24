@@ -1,0 +1,45 @@
+.add-synonym-list-container {
+    margin-top: 16px;
+}
+
+.synonym-form-item {
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.synonym-add-button-container {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.input{
+    border-radius: 10px !important;
+}
+
+.submit{
+    background-color: #3cbd3f;
+    color: white;
+    border: 0;
+}
+
+.submit:hover, .submit:focus, .submit:active{
+    background-color: #37a73a !important;
+    color: white !important;
+    border: 0 !important;
+}
+
+.discard:hover, .discard:focus{
+    background-color: red;
+    color: white !important;
+    border: 0 !important;
+}
+
+.header>h5{
+    width: 100%;
+}
+
+.close:hover{
+    cursor: pointer;
+}

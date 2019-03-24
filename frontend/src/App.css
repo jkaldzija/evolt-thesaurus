@@ -1,0 +1,86 @@
+.add-button {
+    position: fixed;
+    bottom: 48px;
+    right: 48px;
+}
+
+.app-container {
+    margin-top: 120px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 960px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.synonym-list-container {
+    padding: 24px;
+    margin-top: 36px;
+}
+
+
+
+
+.header-title{
+    font-family: "Museo Sans Rounded 700" !important;
+    font-weight: bold;
+}
+
+.primary{
+    /*background-color: #4FADAB !important;*/
+    background-color: #3cbd3f !important;
+    /*background-color: #F0544F !important;*/
+}
+
+.black{
+    color: #303030 !important;
+}
+
+
+
+
+.va-text{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+*:focus {
+    outline: none;
+}
+
+textarea:focus, input:focus{
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    border-color: unset !important;
+}
+
+.card{
+    border-radius:10px !important;
+    padding: 35px 40px 40px 40px;
+}
+
+.modal-content{
+    border-radius: 10px;
+    padding: 15px 20px 20px 20px;
+}
+
+.typography-bold{
+    font-family: "Museo Sans Rounded 500" !important;
+}
+
+.typography-extra-bold{
+    font-family: "Museo Sans Rounded 700" !important;
+}
+
+body{
+    background-color: rgb(233,233,233);
+    font-family: "Museo Sans Rounded 300";
+    padding-bottom: 110px;
+}
+
+.toast{
+    border-radius: 10px;
+}

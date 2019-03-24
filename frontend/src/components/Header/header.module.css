@@ -1,0 +1,25 @@
+.wrapper{
+    height: 70px;
+    margin-bottom: 40px;
+}
+
+.title{
+    color: white;
+    font-family: "Museo Sans Rounded 700";
+    font-size: 25px;
+}
+
+.link{
+    color: white !important;
+    margin-left: 20px;
+
+    font-family: "Museo Sans Rounded 500";
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.link:hover, .active{
+    text-decoration: none !important;
+    background-color: rgba(54, 54, 54, 0.08);
+}
+

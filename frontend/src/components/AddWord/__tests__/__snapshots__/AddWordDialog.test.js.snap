@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Word Dialog should render correctly 1`] = `
+<WithStyles(Dialog)
+  aria-labelledby="add-dialog-title"
+  fullWidth={true}
+  onClose={[Function]}
+  open={true}
+>
+  <WithStyles(DialogTitle)
+    id="add-dialog-title"
+  >
+    Add new word
+  </WithStyles(DialogTitle)>
+  <WithStyles(DialogContent)>
+    <TextField
+      fullWidth={true}
+      label="Word"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      value="test"
+      variant="standard"
+    />
+    <div
+      className="add-synonym-list-container"
+    >
+      <WithStyles(Typography)
+        variant="subheading"
+      >
+        Synonyms:
+      </WithStyles(Typography)>
+      <SynonymFormItem
+        key="0"
+        onChange={[Function]}
+        onDelete={[Function]}
+        value="syn1"
+      />
+      <SynonymFormItem
+        key="1"
+        onChange={[Function]}
+        onDelete={[Function]}
+        value="syn2"
+      />
+      <SynonymFormItem
+        key="2"
+        onChange={[Function]}
+        onDelete={[Function]}
+        value="syn3"
+      />
+      <div
+        className="synonym-add-button-container"
+      >
+        <WithStyles(Button)
+          color="primary"
+          onClick={[Function]}
+        >
+          <pure(AddIcon) />
+           Add synonym
+        </WithStyles(Button)>
+      </div>
+    </div>
+  </WithStyles(DialogContent)>
+  <WithStyles(DialogActions)>
+    <WithStyles(Button)
+      color="primary"
+      onClick={[Function]}
+    >
+      Save word
+    </WithStyles(Button)>
+  </WithStyles(DialogActions)>
+</WithStyles(Dialog)>
+`;

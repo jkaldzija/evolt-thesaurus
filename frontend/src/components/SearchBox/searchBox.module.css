@@ -1,0 +1,30 @@
+
+
+.search-container {
+    padding: 24px;
+}
+
+.search-title {
+    margin-bottom: 12px !important;
+}
+
+.button{
+    margin-left: 40px;
+}
+
+.form{
+    margin-bottom:35px;
+}
+
+.search-button-container {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-radius: 0;
+}

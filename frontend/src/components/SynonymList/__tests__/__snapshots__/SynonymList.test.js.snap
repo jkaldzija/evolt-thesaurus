@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Synonym List should render correctly 1`] = `
+<Fragment>
+  <WithStyles(Typography)
+    className="synonym-list-title"
+    variant="h6"
+  >
+    Synonyms for 
+    word
+  </WithStyles(Typography)>
+  <WithStyles(Typography)
+    key="syn1"
+    variant="body1"
+  >
+    syn1
+  </WithStyles(Typography)>
+  <WithStyles(Typography)
+    key="syn2"
+    variant="body1"
+  >
+    syn2
+  </WithStyles(Typography)>
+  <WithStyles(Typography)
+    key="syn3"
+    variant="body1"
+  >
+    syn3
+  </WithStyles(Typography)>
+</Fragment>
+`;
+
+exports[`Synonym List should render correctly for empty 1`] = `
+<div
+  className="synonym-empty-container"
+>
+  <WithStyles(Typography)
+    variant="h5"
+  >
+    No synonyms found for 
+    word
+  </WithStyles(Typography)>
+</div>
+`;

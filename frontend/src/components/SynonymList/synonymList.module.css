@@ -1,0 +1,33 @@
+.synonym-list-title {
+    margin-bottom: 12px !important;
+}
+
+.synonym-empty-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper{
+    margin-bottom: 15px;
+}
+
+.link{
+    background-color: #88cbe4;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: white;
+    margin-right: 10px;
+    font-family: "Museo Sans Rounded 500";
+}
+
+
+
+.link:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.link-button{
+    padding: 5px 10px;
+}

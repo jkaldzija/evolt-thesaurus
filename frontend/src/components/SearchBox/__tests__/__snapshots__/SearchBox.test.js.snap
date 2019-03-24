@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Box should render correctly 1`] = `
+<WithStyles(Card)
+  className="search-container"
+>
+  <WithStyles(CardContent)>
+    <WithStyles(Typography)
+      className="search-title"
+      color="default"
+      variant="h6"
+    >
+      Search for synonyms
+    </WithStyles(Typography)>
+    <form
+      onSubmit={[Function]}
+    >
+      <TextField
+        fullWidth={true}
+        onChange={[Function]}
+        placeholder="Enter word"
+        required={false}
+        select={false}
+        value=""
+        variant="standard"
+      />
+      <div
+        className="search-button-container"
+      >
+        <WithStyles(Button)
+          color="primary"
+          type="submit"
+          variant="contained"
+        >
+          Search
+        </WithStyles(Button)>
+      </div>
+    </form>
+  </WithStyles(CardContent)>
+</WithStyles(Card)>
+`;

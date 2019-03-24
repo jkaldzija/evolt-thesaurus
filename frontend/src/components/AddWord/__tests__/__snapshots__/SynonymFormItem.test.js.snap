@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Synonym Form Item should render correctly 1`] = `
+<div
+  className="synonym-form-item"
+>
+  <TextField
+    fullWidth={true}
+    onChange={[Function]}
+    required={false}
+    select={false}
+    value="test"
+    variant="standard"
+  />
+  <WithStyles(Button)
+    color="secondary"
+    onClick={[Function]}
+  >
+    <pure(DeleteIcon) />
+  </WithStyles(Button)>
+</div>
+`;

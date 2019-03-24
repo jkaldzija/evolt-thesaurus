@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Application should render correctly 1`] = `
+<div>
+  <ToastContainer
+    autoClose={5000}
+    bodyClassName={null}
+    className={null}
+    closeButton={
+      <CloseButton
+        ariaLabel="close"
+      />
+    }
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    progressClassName={null}
+    progressStyle={null}
+    rtl={false}
+    style={null}
+    toastClassName={null}
+    transition={[Function]}
+  />
+  <WithStyles(AppBar)
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)>
+      <WithStyles(Typography)
+        color="inherit"
+        variant="h6"
+      >
+        Thesaurus
+      </WithStyles(Typography)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <div
+    className="app-container"
+  >
+    <SearchBox
+      onSubmit={[Function]}
+    />
+    <WithStyles(Card)
+      className="synonym-list-container"
+    >
+      <WithStyles(CardContent)>
+        <SynonymList
+          word={
+            Object {
+              "synonyms": Array [
+                "syn1",
+                "syn2",
+                "syn3",
+              ],
+              "value": "test",
+            }
+          }
+        />
+      </WithStyles(CardContent)>
+    </WithStyles(Card)>
+  </div>
+  <div
+    className="add-button"
+  >
+    <WithStyles(Fab)
+      aria-label="Add"
+      color="primary"
+      onClick={[Function]}
+    >
+      <pure(AddIcon) />
+    </WithStyles(Fab)>
+  </div>
+  <AddWordDialog
+    onClose={[Function]}
+    open={false}
+  />
+</div>
+`;

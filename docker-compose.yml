@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  backend:
+    restart: always
+    build:
+      context: ./backend/
+      dockerfile: ./Dockerfile
+  frontend:
+    restart: always
+    build:
+      context: ./frontend/
+      dockerfile: ./Dockerfile
+      args:
+        - REACT_APP_API_URL=/api/v1/
+  ingress:
+    restart: always
+    depends_on:
+      - backend
+      - frontend
+    build:
+      context: ./ingress/
+      dockerfile: ./Dockerfile
+    ports:
+      - "8090:8080"

@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "Museo Sans Rounded 300";
+    src: url("https://db.onlinewebfonts.com/t/a83356d725f309d4c24ac2daca70cd64.eot");
+    src: url("https://db.onlinewebfonts.com/t/a83356d725f309d4c24ac2daca70cd64.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a83356d725f309d4c24ac2daca70cd64.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a83356d725f309d4c24ac2daca70cd64.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/a83356d725f309d4c24ac2daca70cd64.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a83356d725f309d4c24ac2daca70cd64.svg#Museo Sans Rounded 300") format("svg");
+}
+
+@font-face {font-family: "Museo Sans Rounded 500";
+    src: url("https://db.onlinewebfonts.com/t/a07bcad627607b6777616f8e058e8917.eot");
+    src: url("https://db.onlinewebfonts.com/t/a07bcad627607b6777616f8e058e8917.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a07bcad627607b6777616f8e058e8917.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a07bcad627607b6777616f8e058e8917.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/a07bcad627607b6777616f8e058e8917.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a07bcad627607b6777616f8e058e8917.svg#Museo Sans Rounded 500") format("svg");
+}
+
+@font-face {font-family: "Museo Sans Rounded 700";
+    src: url("https://db.onlinewebfonts.com/t/470ad2519927fa4eedb66fdcd82af115.eot");
+    src: url("https://db.onlinewebfonts.com/t/470ad2519927fa4eedb66fdcd82af115.eot?#iefix") format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/470ad2519927fa4eedb66fdcd82af115.woff2") format("woff2"),
+    url("https://db.onlinewebfonts.com/t/470ad2519927fa4eedb66fdcd82af115.woff") format("woff"),
+    url("https://db.onlinewebfonts.com/t/470ad2519927fa4eedb66fdcd82af115.ttf") format("truetype"),
+    url("https://db.onlinewebfonts.com/t/470ad2519927fa4eedb66fdcd82af115.svg#Museo Sans Rounded 700") format("svg");
+}
