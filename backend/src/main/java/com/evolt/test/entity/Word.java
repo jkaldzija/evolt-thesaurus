@@ -1,11 +1,12 @@
 package com.evolt.test.entity;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.Set;
 
 public class Word {
     private String value;
-    private Set<String> synonyms;
+    private Set< @NotBlank String> synonyms;
 
     public Word(String value) {
         this.value = value;
@@ -16,7 +17,7 @@ public class Word {
         this.synonyms = synonyms;
     }
 
-    @NotNull
+    @NotBlank
     public String getValue() {
         return value;
     }

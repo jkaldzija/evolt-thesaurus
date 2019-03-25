@@ -5,6 +5,7 @@ import com.evolt.test.entity.response.WordPaginator;
 import com.evolt.test.util.SynonymGraph;
 import org.jgrapht.Graphs;
 
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
@@ -60,12 +61,12 @@ public class GraphService implements ServiceInterface {
 
     @Override
     public WordPaginator getList(Integer offset, Integer limit) {
-        Set<String> subSet = graph.getSortedVertexSet()
+        List<String> subList = graph.getSortedVertexSet()
                 .stream()
                 .skip(offset)
                 .limit(limit)
-                .collect(Collectors.toSet());
+                .collect(Collectors.toList());
 
-        return new WordPaginator(subSet, graph.getSortedVertexSet().size());
+        return new WordPaginator(subList, graph.getSortedVertexSet().size());
     }
 }

@@ -1,21 +1,21 @@
 package com.evolt.test.entity.response;
 
-import java.util.Set;
+import java.util.List;
 
 public class WordPaginator {
-    private Set<String> words;
+    private List<String> words;
     private Integer count;
 
-    public WordPaginator(Set<String> words, Integer count) {
+    public WordPaginator(List<String> words, Integer count) {
         this.words = words;
         this.count = count;
     }
 
-    public Set<String> getWords() {
+    public List<String> getWords() {
         return words;
     }
 
-    public void setWords(Set<String> words) {
+    public void setWords(List<String> words) {
         this.words = words;
     }
 

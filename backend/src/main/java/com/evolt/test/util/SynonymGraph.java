@@ -6,7 +6,7 @@ import org.jgrapht.graph.DefaultEdge;
 import java.util.*;
 
 public class SynonymGraph extends DefaultDirectedGraph<String, DefaultEdge> {
-    private TreeSet<String> treeSet = new TreeSet<>();
+    private TreeSet<String> treeSet = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);
 
     public SynonymGraph() {
         super(DefaultEdge.class);
