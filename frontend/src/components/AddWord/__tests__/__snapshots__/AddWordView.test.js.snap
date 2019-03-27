@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Word Dialog should render correctly 1`] = `
+<Card
+  tag="div"
+>
+  <h5
+    className="mb-4"
+  >
+    Know a new word?
+  </h5>
+  <ThemeButton
+    className="add-word"
+    onClick={[Function]}
+  >
+    Let us know
+  </ThemeButton>
+  <AddWordDialog
+    isOpen={false}
+    open={false}
+    reloadData={[Function]}
+    title="Add word"
+    toggle={[Function]}
+    word={
+      Object {
+        "value": "",
+      }
+    }
+  />
+</Card>
+`;

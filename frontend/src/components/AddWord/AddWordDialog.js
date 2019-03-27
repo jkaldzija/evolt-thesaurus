@@ -7,20 +7,24 @@ import SynonymFormItem from "./SynonymFormItem";
 import ThemeButton from "../Form/ThemeButton/ThemeButton";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
-import * as classnames from "classnames";
+import classnames from "classnames";
 import {notifyError, notifySuccess} from "../Utility/notification";
+import {eliminateWhiteSpace} from "../Utility/state";
 
 
 // Set prop types
 type AddSynonymDialogProps = {
     isOpen: boolean,
+    reloadData: () => void,
     toggle: () => void,
+    title: string,
+    word: string
 };
 
 class AddWordDialog extends React.Component<AddSynonymDialogProps> {
     state = {
         value: "",
-        synonyms: [""]
+        synonyms: []
     };
 
     addSynonym = () => this.setState({
@@ -34,14 +38,22 @@ class AddWordDialog extends React.Component<AddSynonymDialogProps> {
     };
 
     handleWordChange = event => this.setState({
-        value: event.target.value
+        value: eliminateWhiteSpace(event.target.value)
     });
 
     handleSynonymChange = index => value => {
         const synonyms = [...this.state.synonyms];
-        synonyms[index] = value;
+        synonyms[index] = eliminateWhiteSpace(value);
         this.setState({synonyms})
     };
+
+    componentDidUpdate(prevProps, prevState) {
+        if(prevProps.isOpen != this.props.isOpen && this.props.isOpen){
+            this.setState({
+                value: this.props.word.value
+            })
+        }
+    }
 
     onClose = () => {
         this.setState({
@@ -57,6 +69,7 @@ class AddWordDialog extends React.Component<AddSynonymDialogProps> {
             await wordService.createWord(this.state);
             notifySuccess("Word saved");
             this.onClose();
+            this.props.reloadData();
         } catch (e) {
             notifyError("Error happened while saving");
             console.log(e);
@@ -70,21 +83,21 @@ class AddWordDialog extends React.Component<AddSynonymDialogProps> {
     };
 
     render() {
-        const {isOpen} = this.props;
+        const {isOpen, title} = this.props;
         const {value, synonyms} = this.state;
         return (
-            <Modal isOpen={isOpen} size={"lg"} toggle={() => this.onClose()}>
+            <Modal isOpen={isOpen} size={"lg"} toggle={this.onClose}>
                     <ModalHeader className={classnames("typography-bold", style.header)}>
 
                         <div className={"d-flex justify-content-between w-100"}>
-                            <div>Add word</div>
-                            <FontAwesomeIcon className={style.close} onClick={() => this.onClose()} icon={faTimes}/>
+                            <div>{title}</div>
+                            <FontAwesomeIcon className={style.close} onClick={this.onClose} icon={faTimes}/>
                         </div>
 
                     </ModalHeader>
 
                 <ModalBody>
-                    <form onSubmit={(e) => this.onSave(e)}>
+                    <form onSubmit={this.onSave}>
                         <Row>
                             <Col sm={12} md={{size:6}} className="mb-3">
                                 <label htmlFor={"word"}>Word</label>
@@ -101,7 +114,7 @@ class AddWordDialog extends React.Component<AddSynonymDialogProps> {
 
                             </Col>
                             <Col sm={12} >
-                                <ThemeButton onClick={(e) => this.addSynonym()}>
+                                <ThemeButton onClick={this.addSynonym}>
                                     <FontAwesomeIcon icon={faPlus} className={"mr-2"} />
                                     Add synonym
                                 </ThemeButton>
@@ -125,7 +138,10 @@ class AddWordDialog extends React.Component<AddSynonymDialogProps> {
 // Set default props
 AddWordDialog.defaultProps = {
     open: false,
-    onClose: () => {},
+    toggle: () => {},
+    reloadData: () => {},
+    title: "Add word",
+    word: {value:""}
 };
 
 export default AddWordDialog;

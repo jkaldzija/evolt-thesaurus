@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Box should render correctly 1`] = `
+<div
+  className="wrapper d-flex align-items-center primary"
+>
+  <Container
+    className="d-flex align-items-center"
+    tag="div"
+  >
+    <h1
+      className="title va-text"
+    >
+      Thesaurus
+    </h1>
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="link"
+      exact={true}
+      to="/"
+    >
+      Home
+    </NavLink>
+    <NavLink
+      activeClassName="active"
+      aria-current="page"
+      className="link"
+      exact={true}
+      to="/dictionary"
+    >
+      Dictionary
+    </NavLink>
+    <Link
+      className="link d-none d-md-block"
+      replace={false}
+      target="_blank"
+      to="/api/v1/swagger-ui.html"
+    >
+      Docs
+    </Link>
+  </Container>
+</div>
+`;

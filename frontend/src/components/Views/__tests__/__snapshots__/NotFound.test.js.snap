@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Not found should render correctly 1`] = `
+<Row
+  tag="div"
+>
+  <Col
+    className="mb-4"
+    col={12}
+    tag="div"
+    widths={
+      Array [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl",
+      ]
+    }
+  >
+    <div
+      className="d-flex flex-column justify-content-center align-items-center"
+    >
+      <h2
+        className="typography-bold primary-text not-found"
+      >
+        403
+      </h2>
+      <div>
+        Whoops, page not found
+      </div>
+    </div>
+  </Col>
+</Row>
+`;

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Card, CardBody, CardTitle} from "reactstrap";
-import {alphabet} from "../Utility/alphabet";
 import wordService from "../../api/wordService";
 import WordList from "./WordList";
 import {getQueryParam} from "../Utility/routing";
@@ -17,16 +16,12 @@ type DictionaryViewProps = {};
 
 class DictionaryView extends React.Component<DictionaryViewProps> {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            isLoading: true,
-            wordList: [],
-            count: undefined,
-            page: 0
-        }
-    }
+    state = {
+        isLoading: true,
+        wordList: [],
+        wordCount: undefined,
+        page: 0
+    };
 
     loadData = async () => {
         this.setState({

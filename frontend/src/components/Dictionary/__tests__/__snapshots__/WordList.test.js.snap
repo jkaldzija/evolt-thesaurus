@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Word List should render correctly 1`] = `
+<div>
+  <Table
+    responsiveTag="div"
+    tag="table"
+  >
+    <thead>
+      <tr>
+        <th>
+          Word
+        </th>
+        <th>
+          Synonym list
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        className="word"
+      >
+        <td>
+          Word one
+        </td>
+        <td>
+          <Link
+            className="table-link"
+            replace={false}
+            to="/?q=Word one"
+          >
+            Expand synonyms
+          </Link>
+        </td>
+      </tr>
+      <tr
+        className="word"
+      >
+        <td>
+          Word two
+        </td>
+        <td>
+          <Link
+            className="table-link"
+            replace={false}
+            to="/?q=Word two"
+          >
+            Expand synonyms
+          </Link>
+        </td>
+      </tr>
+      <tr
+        className="word"
+      >
+        <td>
+          Word three
+        </td>
+        <td>
+          <Link
+            className="table-link"
+            replace={false}
+            to="/?q=Word three"
+          >
+            Expand synonyms
+          </Link>
+        </td>
+      </tr>
+    </tbody>
+  </Table>
+  <div
+    className="pagination d-flex justify-content-center w-100 "
+  >
+    <PaginationBoxView
+      activeClassName="active"
+      breakLabel="..."
+      disableInitialCallback={false}
+      disabledClassName="disabled"
+      hrefBuilder={[Function]}
+      marginPagesDisplayed={2}
+      nextClassName="next"
+      nextLabel="Next"
+      onPageChange={[Function]}
+      pageCount={5}
+      pageRangeDisplayed={2}
+      previousClassName="previous"
+      previousLabel="Back"
+    />
+  </div>
+</div>
+`;

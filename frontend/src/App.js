@@ -8,11 +8,12 @@ import SearchBox from "./components/SearchBox/SearchBox";
 import wordService from "./api/wordService";
 import 'react-toastify/dist/ReactToastify.css';
 import Header from "./components/Header/Header";
-import {Route, Switch, withRouter} from "react-router";
+import {Redirect, Route, Switch, withRouter} from "react-router";
 import AddWordView from "./components/AddWord/AddWordView";
 import {routes} from "./components/Utility/routing";
 import Home from "./components/Views/Home";
 import Dictionary from "./components/Views/Dictionary";
+import NotFound from "./components/Views/NotFound";
 
 
 export const navigationRoutes = [
@@ -53,6 +54,7 @@ class App extends Component {
                             const TagName = routeItem.component;
                             return <Route key={routeItem.path} exact path={routeItem.path} component={TagName} />
                         })}
+                        <Route component={NotFound} />
                     </Switch>
                 </Container>
             </div>

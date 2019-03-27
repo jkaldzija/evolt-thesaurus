@@ -1,44 +1,84 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Synonym List should render correctly 1`] = `
-<Fragment>
-  <WithStyles(Typography)
-    className="synonym-list-title"
-    variant="h6"
+<div>
+  <div
+    className="d-flex flex-wrap wrapper"
   >
-    Synonyms for 
-    word
-  </WithStyles(Typography)>
-  <WithStyles(Typography)
-    key="syn1"
-    variant="body1"
-  >
-    syn1
-  </WithStyles(Typography)>
-  <WithStyles(Typography)
-    key="syn2"
-    variant="body1"
-  >
-    syn2
-  </WithStyles(Typography)>
-  <WithStyles(Typography)
-    key="syn3"
-    variant="body1"
-  >
-    syn3
-  </WithStyles(Typography)>
-</Fragment>
+    <Link
+      className="link"
+      key="syn1-0"
+      replace={false}
+      to="/?q=syn1"
+    >
+      syn1
+    </Link>
+    <Link
+      className="link"
+      key="syn2-1"
+      replace={false}
+      to="/?q=syn2"
+    >
+      syn2
+    </Link>
+    <Link
+      className="link"
+      key="syn3-2"
+      replace={false}
+      to="/?q=syn3"
+    >
+      syn3
+    </Link>
+    <ThemeButton
+      className="link-button"
+      onClick={[Function]}
+    >
+      Add Synonym
+    </ThemeButton>
+  </div>
+  <AddWordDialog
+    isOpen={false}
+    open={false}
+    reloadData={[Function]}
+    title="Add synonym"
+    toggle={[Function]}
+    word={
+      Object {
+        "value": "",
+      }
+    }
+  />
+</div>
 `;
 
 exports[`Synonym List should render correctly for empty 1`] = `
-<div
-  className="synonym-empty-container"
->
-  <WithStyles(Typography)
-    variant="h5"
+<div>
+  <div
+    className="d-flex flex-wrap wrapper"
   >
-    No synonyms found for 
-    word
-  </WithStyles(Typography)>
+    <div
+      className="d-flex align-items-center mr-3"
+    >
+      No synonyms found.
+    </div>
+    <ThemeButton
+      className="link-button"
+      onClick={[Function]}
+    >
+      Add Synonym
+    </ThemeButton>
+  </div>
+  <AddWordDialog
+    isOpen={false}
+    open={false}
+    reloadData={[Function]}
+    title="Add synonym"
+    toggle={[Function]}
+    word={
+      Object {
+        "value": "",
+      }
+    }
+  />
 </div>
 `;

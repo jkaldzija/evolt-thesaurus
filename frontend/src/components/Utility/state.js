@@ -15,23 +15,6 @@ export function getSafeDeep(object, path, undefinedValue=""){
     return currentObject;
 }
 
-
-export function setSafeDeep(object, path, value) {
-    let a = path.split('.');
-    let o = object;
-    for (let i = 0; i < a.length - 1; i++) {
-        let n = a[i];
-        if (n in o) {
-            o = o[n];
-        } else {
-            o[n] = {};
-            o = o[n];
-        }
-    }
-    o[a[a.length - 1]] = value;
-}
-
-
-export function deepCopy(item){
-    return JSON.parse(JSON.stringify(item));
+export function eliminateWhiteSpace(string) {
+    return string.trimStart().replace("  ", " ");
 }

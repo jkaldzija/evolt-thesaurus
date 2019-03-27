@@ -4,25 +4,21 @@ import * as qs from "qs";
 import {withRouter} from "react-router";
 import {getSynonymRoute, redirect, routes} from "../Utility/routing";
 import style from "./dictionary.module.css";
-import * as classnames from "classnames";
+import classnames from "classnames";
 import {NavLink, Table} from "reactstrap";
 import {Link} from "react-router-dom";
 
 
 // Set prop types
 type WordListProps = {
-    wordList: Array<string>
+    wordList: Array<string>,
+    pages: number
 };
 
 class WordList extends React.Component<WordListProps> {
 
-    constructor(props) {
-        super(props);
 
-    }
-
-
-    handlePageClick = (page) => {
+    handlePageClick = (page) =>{
         const query = {...this.props.query};
         query.page = page.selected;
         redirect(this.props.history, `${this.props.location.pathname}?${qs.stringify(query)}`);
@@ -72,7 +68,7 @@ class WordList extends React.Component<WordListProps> {
                         disabledClassName={style.disabled}
                         pageRangeDisplayed={2}
                         onPageChange={this.handlePageClick}
-                        hrefBuilder={(index) => this.buildPaginationLink(index)}
+                        hrefBuilder={this.buildPaginationLink}
                         forcePage={this.props.page}
                     />
                 </div>
@@ -84,7 +80,8 @@ class WordList extends React.Component<WordListProps> {
 
 // Set default props
 WordList.defaultProps = {
-    wordList: ["Word one", "Word two", "Word three"]
+    wordList: ["Word one", "Word two", "Word three"],
+    pages: 5
 };
 
 export default withRouter(WordList);

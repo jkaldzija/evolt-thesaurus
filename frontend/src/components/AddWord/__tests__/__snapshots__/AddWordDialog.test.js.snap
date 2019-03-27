@@ -1,73 +1,241 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Add Word Dialog should render correctly 1`] = `
-<WithStyles(Dialog)
-  aria-labelledby="add-dialog-title"
-  fullWidth={true}
-  onClose={[Function]}
-  open={true}
+<Modal
+  autoFocus={true}
+  backdrop={true}
+  backdropTransition={
+    Object {
+      "mountOnEnter": true,
+      "timeout": 150,
+    }
+  }
+  centered={false}
+  fade={true}
+  isOpen={true}
+  keyboard={true}
+  modalTransition={
+    Object {
+      "timeout": 300,
+    }
+  }
+  onClosed={[Function]}
+  onOpened={[Function]}
+  role="dialog"
+  size="lg"
+  toggle={[Function]}
+  zIndex={1050}
 >
-  <WithStyles(DialogTitle)
-    id="add-dialog-title"
+  <ModalHeader
+    charCode={215}
+    className="typography-bold header"
+    closeAriaLabel="Close"
+    tag="h5"
+    wrapTag="div"
   >
-    Add new word
-  </WithStyles(DialogTitle)>
-  <WithStyles(DialogContent)>
-    <TextField
-      fullWidth={true}
-      label="Word"
-      onChange={[Function]}
-      required={false}
-      select={false}
-      value="test"
-      variant="standard"
-    />
     <div
-      className="add-synonym-list-container"
+      className="d-flex justify-content-between w-100"
     >
-      <WithStyles(Typography)
-        variant="subheading"
-      >
-        Synonyms:
-      </WithStyles(Typography)>
-      <SynonymFormItem
-        key="0"
-        onChange={[Function]}
-        onDelete={[Function]}
-        value="syn1"
-      />
-      <SynonymFormItem
-        key="1"
-        onChange={[Function]}
-        onDelete={[Function]}
-        value="syn2"
-      />
-      <SynonymFormItem
-        key="2"
-        onChange={[Function]}
-        onDelete={[Function]}
-        value="syn3"
-      />
-      <div
-        className="synonym-add-button-container"
-      >
-        <WithStyles(Button)
-          color="primary"
-          onClick={[Function]}
-        >
-          <pure(AddIcon) />
-           Add synonym
-        </WithStyles(Button)>
+      <div>
+        Add word
       </div>
+      <FontAwesomeIcon
+        border={false}
+        className="close"
+        fixedWidth={false}
+        flip={null}
+        icon={
+          Object {
+            "icon": Array [
+              352,
+              512,
+              Array [],
+              "f00d",
+              "M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z",
+            ],
+            "iconName": "times",
+            "prefix": "fas",
+          }
+        }
+        inverse={false}
+        listItem={false}
+        mask={null}
+        onClick={[Function]}
+        pull={null}
+        pulse={false}
+        rotation={null}
+        size={null}
+        spin={false}
+        symbol={false}
+        title=""
+        transform={null}
+      />
     </div>
-  </WithStyles(DialogContent)>
-  <WithStyles(DialogActions)>
-    <WithStyles(Button)
-      color="primary"
-      onClick={[Function]}
+  </ModalHeader>
+  <ModalBody
+    tag="div"
+  >
+    <form
+      onSubmit={[Function]}
     >
-      Save word
-    </WithStyles(Button)>
-  </WithStyles(DialogActions)>
-</WithStyles(Dialog)>
+      <Row
+        tag="div"
+      >
+        <Col
+          className="mb-3"
+          md={
+            Object {
+              "size": 6,
+            }
+          }
+          sm={12}
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <label
+            htmlFor="word"
+          >
+            Word
+          </label>
+          <Input
+            className="input"
+            label="Word"
+            name="word"
+            onChange={[Function]}
+            placeholder="Type the word"
+            type="text"
+            value="test"
+          />
+        </Col>
+        <Col
+          md={
+            Object {
+              "offset": 0,
+              "size": 12,
+            }
+          }
+          sm={12}
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <label>
+            Synonyms
+          </label>
+          <SynonymFormItem
+            key="0"
+            onChange={[Function]}
+            onDelete={[Function]}
+            value="syn1"
+          />
+          <SynonymFormItem
+            key="1"
+            onChange={[Function]}
+            onDelete={[Function]}
+            value="syn2"
+          />
+          <SynonymFormItem
+            key="2"
+            onChange={[Function]}
+            onDelete={[Function]}
+            value="syn3"
+          />
+        </Col>
+        <Col
+          sm={12}
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <ThemeButton
+            onClick={[Function]}
+          >
+            <FontAwesomeIcon
+              border={false}
+              className="mr-2"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Object {
+                  "icon": Array [
+                    448,
+                    512,
+                    Array [],
+                    "f067",
+                    "M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z",
+                  ],
+                  "iconName": "plus",
+                  "prefix": "fas",
+                }
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform={null}
+            />
+            Add synonym
+          </ThemeButton>
+        </Col>
+        <Col
+          md={
+            Object {
+              "offset": 6,
+              "size": 6,
+            }
+          }
+          sm={12}
+          tag="div"
+          widths={
+            Array [
+              "xs",
+              "sm",
+              "md",
+              "lg",
+              "xl",
+            ]
+          }
+        >
+          <div
+            className="d-flex justify-content-end"
+          >
+            <ThemeButton
+              className="submit"
+            >
+              Submit
+            </ThemeButton>
+          </div>
+        </Col>
+      </Row>
+    </form>
+  </ModalBody>
+</Modal>
 `;

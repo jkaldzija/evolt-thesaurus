@@ -1,7 +1,7 @@
 import React from 'react';
 import {Card, Container, Input, Spinner} from "reactstrap";
 import style from "./searchBox.module.css";
-import * as classnames from "classnames";
+import classnames from "classnames";
 import ThemeButton from "../Form/ThemeButton/ThemeButton";
 import {WithLoading} from "../HOC/WithLoading";
 import SynonymList from "../SynonymList/SynonymList";
@@ -9,6 +9,7 @@ import {withRouter} from "react-router";
 import * as qs from "qs";
 import wordService from "../../api/wordService";
 import {getSafe, getSafeDeep} from "../Utility/state";
+import {getQueryParam} from "../Utility/routing";
 
 const SynonymListWithLoading = WithLoading(SynonymList);
 
@@ -16,7 +17,7 @@ class SearchBox extends React.Component {
     constructor(props) {
         super(props);
 
-        let currentSearch = qs.parse(this.props.location.search, {ignoreQueryPrefix: true}).q;
+        let currentSearch = getQueryParam(this.props.location.search, "q");
         if(!currentSearch) currentSearch = "";
 
         this.state = {
@@ -44,8 +45,9 @@ class SearchBox extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, SS){
-        const prevSearch = qs.parse(prevProps.location.search, {ignoreQueryPrefix: true}).q;
-        const search = qs.parse(this.props.location.search, {ignoreQueryPrefix: true}).q;
+        const prevSearch = getQueryParam(prevProps.location.search, "q");
+        const search = getQueryParam(this.props.location.search, "q");
+        console.log(prevSearch + "   " + search);
         if(search != prevSearch){
             this.setState({ search }, () => {
                 this.performSearch();
@@ -84,7 +86,7 @@ class SearchBox extends React.Component {
                             className={classnames(style["search-input"])}
                             value={this.state.search}
                             name={"search"}
-                            onChange={(e) => this.onInput(e)}
+                            onChange={this.onInput}
                         />
                         <ThemeButton className={style.button}>
                             Search
@@ -92,7 +94,7 @@ class SearchBox extends React.Component {
 
                     </form>
                     <SynonymListWithLoading
-                        reloadData={() => this.reloadData()}
+                        reloadData={this.reloadData}
                         currentWord={this.state.currentWord}
                         isLoading={this.state.isLoading}
                         synonymList={getSafeDeep(this.state, "currentWord.synonyms", [])}  />

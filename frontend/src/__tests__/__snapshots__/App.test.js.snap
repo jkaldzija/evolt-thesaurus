@@ -26,58 +26,27 @@ exports[`Application should render correctly 1`] = `
     toastClassName={null}
     transition={[Function]}
   />
-  <WithStyles(AppBar)
-    color="primary"
-    position="fixed"
+  <Header />
+  <Container
+    tag="div"
   >
-    <WithStyles(Toolbar)>
-      <WithStyles(Typography)
-        color="inherit"
-        variant="h6"
-      >
-        Thesaurus
-      </WithStyles(Typography)>
-    </WithStyles(Toolbar)>
-  </WithStyles(AppBar)>
-  <div
-    className="app-container"
-  >
-    <SearchBox
-      onSubmit={[Function]}
-    />
-    <WithStyles(Card)
-      className="synonym-list-container"
-    >
-      <WithStyles(CardContent)>
-        <SynonymList
-          word={
-            Object {
-              "synonyms": Array [
-                "syn1",
-                "syn2",
-                "syn3",
-              ],
-              "value": "test",
-            }
-          }
-        />
-      </WithStyles(CardContent)>
-    </WithStyles(Card)>
-  </div>
-  <div
-    className="add-button"
-  >
-    <WithStyles(Fab)
-      aria-label="Add"
-      color="primary"
-      onClick={[Function]}
-    >
-      <pure(AddIcon) />
-    </WithStyles(Fab)>
-  </div>
-  <AddWordDialog
-    onClose={[Function]}
-    open={false}
-  />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        key="/"
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        key="/dictionary"
+        path="/dictionary"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </Container>
 </div>
 `;

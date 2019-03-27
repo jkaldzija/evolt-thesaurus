@@ -3,7 +3,7 @@ import {Button, Input} from "reactstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import ThemeButton from "../Form/ThemeButton/ThemeButton";
-import * as classnames from "classnames";
+import classnames from "classnames";
 import style from "./style.module.css";
 
 type SynonymFormItemProps = {

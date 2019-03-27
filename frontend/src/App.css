@@ -33,6 +33,10 @@
     /*background-color: #F0544F !important;*/
 }
 
+.primary-text{
+    color: #3cbd3f;
+}
+
 .black{
     color: #303030 !important;
 }
@@ -79,6 +83,10 @@ body{
     background-color: rgb(233,233,233);
     font-family: "Museo Sans Rounded 300";
     padding-bottom: 110px;
+}
+
+.not-found{
+    font-size: 6rem;
 }
 
 .toast{

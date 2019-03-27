@@ -1,34 +1,12 @@
 import React from 'react';
 import {shallow} from "enzyme";
-import SynonymList from "../SynonymList";
+import AddWordView from "../AddWordView";
 
-describe('Synonym List', function () {
+describe('Add Word Dialog', function () {
     it('should render correctly', function () {
-        const word = {
-            value: "word",
-            synonyms: [
-                "syn1",
-                "syn2",
-                "syn3"
-            ]
-        };
-
         const component = shallow(
-            <SynonymList synonymList={word.synonyms}/>
+            <AddWordView />
         );
-
-        expect(component).toMatchSnapshot();
-    });
-    it('should render correctly for empty', function () {
-        const word = {
-            value: "word",
-            synonyms: null
-        };
-
-        const component = shallow(
-            <SynonymList synonymList={word.synonyms}/>
-        );
-
         expect(component).toMatchSnapshot();
     });
 
@@ -38,7 +16,7 @@ describe('Synonym List', function () {
             synonyms: null
         };
         const component = shallow(
-            <SynonymList synonymList={word.synonyms}/>
+            <AddWordView />
         );
 
         component.instance().toggleDialog("addSynonym")();
@@ -46,4 +24,5 @@ describe('Synonym List', function () {
         component.instance().toggleDialog("addSynonym")();
         expect(component.state("addSynonymDialogOpen")).toBe(false);
     });
+
 });

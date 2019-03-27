@@ -2,18 +2,15 @@ import React from 'react';
 import {Button, Card} from "reactstrap";
 import ThemeButton from "../Form/ThemeButton/ThemeButton";
 import AddWordDialog from "./AddWordDialog";
+import style from "./style.module.css";
 
 class AddWordView extends React.Component {
 
-    constructor(props) {
-        super(props);
+    state = {
+        addSynonymDialogOpen: false
+    };
 
-        this.state = {
-            addSynonymDialogOpen: false
-        }
-    }
-
-    toggleDialogOpen = (key) => {
+    toggleDialog = (key) => () => {
         const fieldKey = `${key}DialogOpen`;
         this.setState({ [fieldKey]: !this.state[fieldKey] });
     };
@@ -29,9 +26,9 @@ class AddWordView extends React.Component {
 
         return <Card>
             <h5 className="mb-4">Know a new word?</h5>
-            <ThemeButton onClick={() => this.toggleDialogOpen("addSynonym")} className="w-50">Let us know</ThemeButton>
+            <ThemeButton onClick={this.toggleDialog("addSynonym")} className={style['add-word']}>Let us know</ThemeButton>
             <AddWordDialog
-                toggle={() => this.toggleDialogOpen("addSynonym")}
+                toggle={this.toggleDialog("addSynonym")}
                 isOpen={this.state.addSynonymDialogOpen}
             />
         </Card>

@@ -1,14 +1,18 @@
 import React from 'react';
-import {shallow} from "enzyme";
+import {mount, shallow} from "enzyme";
 import {apiClient} from "../api/util";
 import App from "../App";
 import MockAdapter from "axios-mock-adapter";
+import {MemoryRouter, withRouter} from "react-router";
 
 describe('Application', function () {
     it('should render correctly', function () {
         const component = shallow(
-            <App/>
-        );
+            <MemoryRouter>
+                <App/>
+            </MemoryRouter>
+
+        ).dive().dive().dive().dive();
         component.setState({
             word: {
                 value: "test",
@@ -23,8 +27,11 @@ describe('Application', function () {
     });
     it('should open dialog on fab click', function () {
         const component = shallow(
-            <App/>
-        );
+            <MemoryRouter>
+                <App/>
+            </MemoryRouter>
+
+        ).dive().dive().dive().dive();
         component.instance().toggleAddDialog();
         expect(component.state("addDialogOpen")).toBe(true);
         component.instance().toggleAddDialog();
@@ -42,8 +49,11 @@ describe('Application', function () {
         const mock = new MockAdapter(apiClient);
         mock.onGet("word", {value: "test"}).reply(200, wordResponse);
         const component = shallow(
-            <App/>
-        );
+            <MemoryRouter>
+                <App/>
+            </MemoryRouter>
+
+        ).dive().dive().dive().dive();
         await component.instance().onSubmit("test");
         expect(component.state("word")).toEqual(wordResponse);
     });

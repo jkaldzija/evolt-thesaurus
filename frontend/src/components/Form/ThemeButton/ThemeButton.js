@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button} from "reactstrap";
-import * as classnames from "classnames";
+import classnames from "classnames";
 import style from "./themeButton.module.css";
 
 export default function ThemeButton(props){

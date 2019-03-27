@@ -36,6 +36,10 @@
     border: 0 !important;
 }
 
+.add-word{
+    width: 125px;
+}
+
 .header>h5{
     width: 100%;
 }

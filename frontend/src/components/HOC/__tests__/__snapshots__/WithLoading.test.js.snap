@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Loading should render correctly 1`] = `
+<div>
+  <div
+    className="d-flex flex-wrap wrapper"
+  >
+    <div
+      className="d-flex align-items-center mr-3"
+    >
+      No synonyms found.
+    </div>
+    <ThemeButton
+      className="link-button"
+      onClick={[Function]}
+    >
+      Add Synonym
+    </ThemeButton>
+  </div>
+  <AddWordDialog
+    isOpen={false}
+    open={false}
+    reloadData={[Function]}
+    title="Add synonym"
+    toggle={[Function]}
+    word={
+      Object {
+        "value": "",
+      }
+    }
+  />
+</div>
+`;

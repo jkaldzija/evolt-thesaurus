@@ -20,14 +20,11 @@ export function notifySuccess(message){
 export function createMessage(message, type = 'success'){
 
     switch(type){
-        case 'success':
-            toast.success(message, settings);
-            break;
         case 'error':
             toast.error(message, settings);
             break;
         default:
-            toast.info(message, settings);
+            toast.success(message, settings);
             break;
     }
 

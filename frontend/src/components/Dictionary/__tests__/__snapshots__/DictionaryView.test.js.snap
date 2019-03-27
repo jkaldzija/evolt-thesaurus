@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dictionary View should render correctly 1`] = `
+<Card
+  tag="div"
+>
+  <CardTitle
+    className="mb-0"
+    tag="div"
+  >
+    <h5>
+      Not sure what you are looking for? Take a look at our dictionary:
+    </h5>
+  </CardTitle>
+  <CardBody
+    className="px-0"
+    tag="div"
+  >
+    <_temp
+      isLoading={true}
+      page={0}
+      pages={NaN}
+      wordList={Array []}
+    />
+  </CardBody>
+</Card>
+`;

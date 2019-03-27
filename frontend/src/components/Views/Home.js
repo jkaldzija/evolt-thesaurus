@@ -18,7 +18,7 @@ class Home extends React.Component<HomeProps> {
 
         return (
             <Row>
-                <Col sm={12} md={8}>
+                <Col sm={12} md={8} className={"mb-4"}>
                     <SearchBox/>
                 </Col>
                 <Col>

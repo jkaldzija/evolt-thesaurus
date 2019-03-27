@@ -7,13 +7,9 @@ export function WithLoading(Component) {
 
     return class extends React.Component {
 
-        constructor(props) {
-            super(props);
-
-            this.state = {
-                hidden: true
-            }
-        }
+        state = {
+            hidden: true
+        };
 
 
         componentDidUpdate(prevProps, prevState) {
