@@ -28,13 +28,18 @@ class SearchBox extends React.Component {
     }
 
     performSearch = async() => {
+        if(this.state.search === "") return;
         this.setState({
             isLoading: true
         } );
+        let response = {};
+        try{
+            response = await wordService.getSynonymsForWord(getSafe(this.state.search));
+        }catch (e) {
 
-        const {data} = await wordService.getSynonymsForWord(getSafe(this.state.search));
+        }
         this.setState({
-            currentWord: data,
+            currentWord: getSafe(response.data),
             isLoading: false
         });
 

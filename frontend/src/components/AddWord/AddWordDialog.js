@@ -13,7 +13,7 @@ import {eliminateWhiteSpace} from "../Utility/state";
 
 
 // Set prop types
-type AddSynonymDialogProps = {
+type AddWordDialogProps = {
     isOpen: boolean,
     reloadData: () => void,
     toggle: () => void,
@@ -21,7 +21,7 @@ type AddSynonymDialogProps = {
     word: string
 };
 
-class AddWordDialog extends React.Component<AddSynonymDialogProps> {
+class AddWordDialog extends React.Component<AddWordDialogProps> {
     state = {
         value: "",
         synonyms: []
@@ -105,6 +105,7 @@ class AddWordDialog extends React.Component<AddSynonymDialogProps> {
                                        className={style.input}
                                        value={value}
                                        name={"word"}
+                                       required={true}
                                        placeholder={"Type the word"}
                                        onChange={this.handleWordChange}/>
                             </Col>

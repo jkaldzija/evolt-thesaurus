@@ -17,6 +17,7 @@ const SynonymFormItem = ({value, onChange, onDelete}: SynonymFormItemProps) => (
         <Input
                className={classnames("mr-3", style.input)}
                value={value}
+               required={true}
                placeholder={"Enter a synonym"}
                onChange={e => onChange(e.target.value)}/>
         <ThemeButton className={classnames(style.discard, "bg-danger text-white border-0")} onClick={onDelete}><FontAwesomeIcon icon={faTimes}></FontAwesomeIcon></ThemeButton>
