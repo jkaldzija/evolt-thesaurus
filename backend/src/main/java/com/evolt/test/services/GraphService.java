@@ -10,8 +10,6 @@ import java.util.Set;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 
-//import edu.stanford.nlp.process.Morphology;
-
 public class GraphService implements ServiceInterface {
 
     private SynonymGraph graph = new SynonymGraph();
@@ -19,15 +17,11 @@ public class GraphService implements ServiceInterface {
 
     @Override
     public void addWord(Word word) {
-
-        //Morphology morphology = new Morphology();
-        //String stemmedName = morphology.stem(name.toLowerCase());
-        String stemmedName = word.getValue().toLowerCase();
+        String stemmedName = filter(word.getValue());
         graph.addVertex(stemmedName);
 
         for (String synonym : word.getSynonyms()) {
-            //String stemmedSynonym = morphology.stem(synonym.toLowerCase());
-            String stemmedSynonym = synonym.toLowerCase();
+            String stemmedSynonym = filter(synonym);
 
             if (!stemmedSynonym.equals(stemmedName) && graph.getEdge(stemmedSynonym, stemmedName) == null) {
                 graph.addVertex(stemmedSynonym);
@@ -38,9 +32,7 @@ public class GraphService implements ServiceInterface {
 
     @Override
     public Set<String> getLinkedWords(String name) {
-        //Morphology morphology = new Morphology();
-        //String stemmedName = morphology.stem(name.toLowerCase());
-        String stemmedName = name.toLowerCase();
+        String stemmedName = filter(name);
 
         if (graph.vertexSet().contains(stemmedName)) {
             Set<String> linkedNodes = new TreeSet<>();
@@ -68,5 +60,9 @@ public class GraphService implements ServiceInterface {
                 .collect(Collectors.toList());
 
         return new WordPaginator(subList, graph.getSortedVertexSet().size());
+    }
+
+    public String filter(String word) {
+        return word.toLowerCase();
     }
 }

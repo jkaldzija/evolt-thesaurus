@@ -7,7 +7,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotBlank;
 
 @RestController
 @RequestMapping(value = "/word")
@@ -23,7 +22,7 @@ public class WordController extends BaseController {
 
     @ApiOperation(value = "Return word object with all synonyms.")
     @RequestMapping(method = RequestMethod.GET)
-    public Word get(@Valid @NotBlank @RequestParam String value) {
+    public Word get(@RequestParam String value) {
         return getGraphService().getWordDetails(value);
     }
 

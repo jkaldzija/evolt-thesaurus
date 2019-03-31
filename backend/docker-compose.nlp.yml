@@ -7,6 +7,6 @@ services:
       context: .
       dockerfile: ./Dockerfile
     environment:
-        - profile=default
+        - profile=nlp
     ports:
       - '8090:8080'

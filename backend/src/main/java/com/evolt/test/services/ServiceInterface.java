@@ -5,7 +5,7 @@ import com.evolt.test.entity.response.WordPaginator;
 
 import java.util.Set;
 
-interface ServiceInterface {
+public interface ServiceInterface {
 
     void addWord(Word word);
 

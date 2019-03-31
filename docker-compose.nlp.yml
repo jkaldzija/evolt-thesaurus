@@ -7,7 +7,7 @@ services:
       context: ./backend/
       dockerfile: ./Dockerfile
     environment:
-      - profile=default
+      - profile=nlp
   frontend:
     restart: always
     build:

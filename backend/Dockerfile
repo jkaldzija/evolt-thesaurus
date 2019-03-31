@@ -1,12 +1,14 @@
 FROM java:8
 FROM maven:alpine
 
+ENV profile default
+
 WORKDIR /app
 ADD pom.xml /app
-RUN mvn verify clean --fail-never
 
 COPY . /app
-RUN mvn -v
-RUN mvn clean install
+RUN mvn clean install -P$profile
 
-ENTRYPOINT ["java","-jar","/app/target/test-1.0.2.jar"]
+RUN ["chmod", "+x", "/app/start.sh"]
+
+ENTRYPOINT ["/bin/bash", "-c", "/app/start.sh $profile"]

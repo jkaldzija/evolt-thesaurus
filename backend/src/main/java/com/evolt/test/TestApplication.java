@@ -1,11 +1,14 @@
 package com.evolt.test;
 
 import com.evolt.test.services.GraphService;
+import com.evolt.test.services.NlpGraphService;
+import com.evolt.test.services.ServiceInterface;
 import com.google.common.base.Predicates;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Profile;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.spi.DocumentationType;
@@ -22,8 +25,15 @@ public class TestApplication {
     }
 
     @Bean
-    public GraphService graphService() {
+    @Profile("default")
+    public ServiceInterface graphService() {
         return new GraphService();
+    }
+
+    @Bean
+    @Profile("nlp")
+    public ServiceInterface nlpGraphService() {
+        return new NlpGraphService();
     }
 
     @Bean
