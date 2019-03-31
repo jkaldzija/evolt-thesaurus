@@ -7,5 +7,4 @@
 - Base version: docker-compose up --build
 - NLP version:  docker-compose -f docker-compose.nlp.yml up --build
 
-3. URL
-http://localhost:8090
+3. URL: http://localhost:8090
